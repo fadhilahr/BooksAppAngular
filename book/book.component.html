@@ -1,0 +1,29 @@
+
+
+<table class="table table-bordered" align="center" bgcolor="#ffcc99">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Publisher</th>
+      <th scope="col">Price</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of book" >
+      <td>{{ b.id }}</td>
+      <td>{{ b.title }}</td>
+      <td>{{ b.publisher }}</td>
+      <td>{{ b.price }}</td>
+      <td>{{ b.stock }}</td>
+      <td button (click)="openModal(b.id)"    class="btn btn-outline-primary"><i class="fas fa-bars"></i></td>
+      <td button (click)="deleteBook(b.id)"  class ="btn btn-outline-danger" ><i class="far fa-trash-alt"></i></td>
+    </tr>
+
+
+  </tbody>
+
+
+</table>
